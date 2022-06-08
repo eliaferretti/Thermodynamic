@@ -103,14 +103,14 @@ end
 
 function y = viscosity_perry(mu_param,T)
 %The function returns the value of dynamic viscosity @ a given temperature T according to
-%the hyperbolic function (Perry)
+%the hyperbolic function (Perry's)
 
     y = mu_param(:,1).*T.^mu_param(:,2)./(1+mu_param(:,3)./T+mu_param(:,4)./T.^2);
 end
 
 function y = thermalConductivity_perry(k_param,T)
 %The function returns the value of thermal conductivity @ a given temperature T according to
-%the hyperbolic function (Perry)
+%the hyperbolic function (Perry's)
 
     y = k_param(:,1).*T.^k_param(:,2)./(1+k_param(:,3)./T+k_param(:,4)./T.^2);
 end
